@@ -1,7 +1,7 @@
 const ascii_placeholders = [
   {
-      id: "ascii-placeholder-1",
-      content: `
+    id: "ascii-placeholder-1",
+    content: `
     __________________
       _/ ||                ~-_
                               ,/   //       /~-       /  ~-_  ________----------//
@@ -15,10 +15,9 @@ const ascii_placeholders = [
   },
 
   {
-      id: "ascii-placeholder-3",
-      content: `
+    id: "ascii-placeholder-3",
+    content: `
                 ░░░░░░░░░░                                        
-            ░░░░          ░░                                      
         ░░░░            ░░                                        
       ░░              ░░                                          
     ░░              ░░      ██      ██                            
@@ -70,7 +69,7 @@ const ascii_placeholders = [
 function load_ascii_art(art) {
   const placeholder = document.getElementById(art.id);
   if (placeholder) {
-      placeholder.innerHTML = art.content;
+    placeholder.innerHTML = art.content;
   }
 }
 

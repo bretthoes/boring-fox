@@ -13,8 +13,18 @@
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('fonts/Montserrat/Montserrat-Regular.woff') format('woff'), 
-         url('fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'), 
-         url('fonts/Montserrat/Montserrat-Regular.ttf')  format('truetype'),
+    font-family: 'MesloLGS NF Regular';
+    src: url('fonts/MesloLGS/MesloLGS-NF-Regular.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'MesloLGS NF Bold';
+    src: url('fonts/MesloLGS/MesloLGS-NF-Bold.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'MesloLGS NF Bold Italic';
+    src: url('fonts/MesloLGS/MesloLGS-NF-Bold-Italic.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'MesloLGS NF Italic';
+    src: url('fonts/MesloLGS/MesloLGS-NF-Italic.ttf') format('truetype'),
 }

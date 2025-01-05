@@ -1,77 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="static/assets/favicon.png">
-  <link rel="stylesheet" type="text/css" href="static/style.css">
-  <title>startpage</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>startpage</title>
+  </head>
 
-<body>
-  <div class="container">
-    <div class="tabs" id="tab-group"></div>
-    
-    <div class="content" id="content3">
-      <h1><pre class="ascii" id="ascii-placeholder-3"></pre></h1>
-      <div class="wrapper">
-        <div class="weather">
-          <div id="weather-city"></div>
-          <div id="icon-wrapper">
-            <div id="weather-icon"></div>
-            <div id="weather-info"></div>
-          </div>
-          <div id="weather-temp"></div>
-          <div id="weather-error"></div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="content" id="content4">
-      <h1><pre class='ascii' id='ascii-placeholder-4'></pre></h1>
-      <h1 id="time-line">Currency and Unit Conversions Toolbox</h1>
-      <div class="conversion-container">
-        <div class="conversion-box">
-          <h2>Currency Converter</h2>
-          <div class="currency">
-            <input id="amount1" placeholder="Amount"/>
-            <select id="currency1"></select>
-            <span id="to">TO</span>
-            <input id="amount2" disabled placeholder="Converted Amount"/>
-            <select id="currency2"></select>
-          </div>
-          <div id="rate-conv-info">Exchange Rate: <span id="rate"></span></div>
-        </div>
-        <div class="conversion-box">
-          <h2>Unit Conversion</h2>
-          <div class="unit-conversion-box">
-            <input id="unit-input" placeholder="Value"/>
-            <select id="unit-from">
-              <option value="feet">Feet</option>
-              <option value="inches">Inches</option>
-              <option value="meters">Meters</option>
-              <option value="centimeters" selected>Centimeters</option>
-              <option value="kilometers">Kilometers</option>
-              <option value="miles">Miles</option>
-            </select>
-            <span id="to">TO</span>
-            <input id="unit-result" disabled placeholder="Converted Unit"/>
-            <select id="unit-to">
-              <option value="feet" selected>Feet</option>
-              <option value="inches">Inches</option>
-              <option value="meters">Meters</option>
-              <option value="centimeters">Centimeters</option>
-              <option value="kilometers">Kilometers</option>
-              <option value="miles">Miles</option>
-            </select>
+  <body>
+    <div class="container">
+      <pre class="ascii" id="ascii-art"></pre>
+      <br />
+      <p id="ascii-description">.<p>
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+        <h1 id="time-line">Good afternoon,<br /> it is <span id="clock" style="color: #be80a7;"></span></h1>
+        <div class="wrapper">
+          <div class="weather">
+            <div id="weather-city"></div>
+            <div id="icon-wrapper">
+              <div id="weather-icon"></div>
+              <div id="weather-info"></div>
+            </div>
+            <div id="weather-temp"></div>
+            <div id="weather-error"></div>
           </div>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <ul class="bookmark-list">
+            <li>
+              <span class="folder">Category 1</span>
+              <ul class="sub-list">
+                <li><a href="">link #1</a></li>
+                <li><a href="">link #2</a></li>
+                <li><a href="">link #3</a></li>
+                <li><a href="">link #4</a></li>
+              </ul>
+            </li>
+            <br>
+            <li>
+              <span class="folder">Category 2</span>
+              <ul class="sub-list">
+                <li><a href="">link #5</a></li>
+                <li><a href="">link #6</a></li>
+                <li><a href="">link #7</a></li>
+                <li><a href="">link #8</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul class="bookmark-list">
+            <li>
+              <span class="folder">Category 3</span>
+              <ul class="sub-list">
+                <li><a href="">link #9</a></li>
+                <li><a href="">link #10</a></li>
+                <li><a href="">link #11</a></li>
+                <li><a href="">link #12</a></li>
+              </ul>
+            </li>
+            <br>
+            <li>
+              <span class="folder">Category 4</span>
+              <ul class="sub-list">
+                <li><a href="">link #13</a></li>
+                <li><a href="">link #14</a></li>
+                <li><a href="">link #15</a></li>
+                <li><a href="">link #16</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul class="bookmark-list">
+            <li>
+              <span class="folder">Category 5</span>
+              <ul class="sub-list">
+                <li><a href="">link #17</a></li>
+                <li><a href="">link #18</a></li>
+                <li><a href="">link #19</a></li>
+                <li><a href="">link #20</a></li>
+              </ul>
+            </li>
+            <br>
+            <li>
+              <span class="folder">Category 6</span>
+              <ul class="sub-list">
+                <li><a href="">link #21</a></li>
+                <li><a href="">link #22</a></li>
+                <li><a href="">link #23</a></li>
+                <li><a href="">link #24</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  <script src='scripts/tabs.js'></script> 
-  <script src='scripts/time.js'></script>
-  <script src='scripts/temp.js'></script>
-  <script src='scripts/conv.js'></script>
-  <script src='scripts/ascii.js'></script>
-</body>
+    <script src='scripts/time.js'></script>
+    <script src='scripts/temp.js'></script>
+  </body>
 </html>

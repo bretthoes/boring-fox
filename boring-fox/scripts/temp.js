@@ -4,18 +4,18 @@ window.addEventListener('load', () => {
     const weather_temp = document.getElementById('weather-temp');
     const weather_icon = document.getElementById('weather-icon');
     const weather_error = document.getElementById('weather-error');
-    
+
     /* ==========================================
     WEATHER INFORMATION CONFIG
     ========================================== */
 
     const api_key = ''; //Example (put your openweathermap.org API key here)
-    const country = 'UK'; //Example
-    const location = 'London'; //Example
+    const country = 'Canada'; //Example
+    const location = 'Toronto'; //Example
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}`;
 
-  fetch(url)
+    fetch(url)
         .then(response => response.json())
         .then(data => {
             if (data.cod !== 200) {
@@ -37,31 +37,31 @@ window.addEventListener('load', () => {
         .catch(error => {
             weather_error.innerHTML = 'An error occurred while fetching the weather<br><br>Check your API key';
             console.log(error);
-    });
+        });
 });
 
 
 function get_icon(code) {
     const icon_map = {
-        '01d': { png: 'static/assets/icons/sun.png'},
-        '02d': { png: 'static/assets/icons/cloud-sun.png'},
-        '03d': { png: 'static/assets/icons/cloud.png'},
-        '04d': { png: 'static/assets/icons/cloud.png'},
-        '09d': { png: 'static/assets/icons/cloud-rain.png'},
-        '10d': { png: 'static/assets/icons/cloud-sun-rain.png'},
-        '11d': { png: 'static/assets/icons/bolt.png'},
-        '13d': { png: 'static/assets/icons/snowflake.png'},
-        '50d': { png: 'static/assets/icons/smog.png'},
-        '01n': { png: 'static/assets/icons/moon.png'},
-        '02n': { png: 'static/assets/icons/cloud-moon.png'},
-        '03n': { png: 'static/assets/icons/cloud.png'},
-        '04n': { png: 'static/assets/icons/cloud.png'},
-        '09n': { png: 'static/assets/icons/cloud-rain.png'},
-        '10n': { png: 'static/assets/icons/cloud-moon-rain.png'},
-        '11n': { png: 'static/assets/icons/bolt.png'},
-        '13n': { png: 'static/assets/icons/snowflake.png'},
-        '50n': { png: 'static/assets/icons/smog.png'}
+        '01d': { png: 'static/assets/icons/sun.png' },
+        '02d': { png: 'static/assets/icons/cloud-sun.png' },
+        '03d': { png: 'static/assets/icons/cloud.png' },
+        '04d': { png: 'static/assets/icons/cloud.png' },
+        '09d': { png: 'static/assets/icons/cloud-rain.png' },
+        '10d': { png: 'static/assets/icons/cloud-sun-rain.png' },
+        '11d': { png: 'static/assets/icons/bolt.png' },
+        '13d': { png: 'static/assets/icons/snowflake.png' },
+        '50d': { png: 'static/assets/icons/smog.png' },
+        '01n': { png: 'static/assets/icons/moon.png' },
+        '02n': { png: 'static/assets/icons/cloud-moon.png' },
+        '03n': { png: 'static/assets/icons/cloud.png' },
+        '04n': { png: 'static/assets/icons/cloud.png' },
+        '09n': { png: 'static/assets/icons/cloud-rain.png' },
+        '10n': { png: 'static/assets/icons/cloud-moon-rain.png' },
+        '11n': { png: 'static/assets/icons/bolt.png' },
+        '13n': { png: 'static/assets/icons/snowflake.png' },
+        '50n': { png: 'static/assets/icons/smog.png' }
     };
 
-    return icon_map[code] || { png: 'static/assets/icons/question.png'};
+    return icon_map[code] || { png: 'static/assets/icons/question.png' };
 }

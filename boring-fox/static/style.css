@@ -7,12 +7,12 @@
 /* Colors and variables */
 :root {
     --background-color: #202020;
-    --text-color: #ffffff;
+    --text-color: #898989;
     --primary-color: #2b2b2b;
     --secondary-color: #363636;
-    --font-primary: Minecraftia;
-    --font-secondary: Montserrat;
-    --font-mono: Fira Mono;
+    --font-primary: MesloLGS NF Italic;
+    --font-secondary: MesloLGS NF Bold;
+    --font-mono: MesloLGS NF Regular;
     --font-size-mini: 0.66em;
 	--font-size-ascii: 12px;
     --font-size-smaller: 16px;
@@ -21,7 +21,7 @@
     --font-size-content: 20px;
     --font-size-large: 34px;
     --shadow: rgba(0, 0, 0, 0.3);
-    --link-color: #85888b;
+    --link-color: #98BB6C;
     --link-hover-bg: rgb(78, 80, 82);
     --border-color: #696a6a;
 }
@@ -41,7 +41,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 
@@ -54,8 +53,7 @@ body {
 /* Main Box */
 .container {
     position: relative;
-    width: 1150px;
-    height: 620px;
+    width: 90%;/*1150px;*/
     padding: 20px;
     background-color: var(--primary-color);
     box-shadow: 0 0 10px var(--shadow);
@@ -94,11 +92,6 @@ h1 {
     margin-top: 30px;
     margin-bottom: 30px;
     letter-spacing: 1.5px;
-    word-spacing: 5px;
-}
-
-#clock {
-    color: #c9c9c9;
 }
 
 .content {
@@ -128,21 +121,21 @@ h1 {
 }
 
 .folder {
+    font-family: var(--font-mono);
     font-size: var(--font-size-smaller);
     margin-top: 5%;
     margin-bottom: 1.5%;
     width: 300px;
     letter-spacing: 1px;
     display: block;
-    font-weight: bold;
-    color: #c9c9c9;
+    color: #E6C384;
     border-bottom: 1px solid var(--border-color);
     line-height: 1.1;
 }
 
 a {
     font-family: var(--font-mono);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
     text-decoration: none;
     color: var(--link-color);
     transition: color 0.2s;
@@ -250,15 +243,12 @@ select {
     flex-direction: column;
     align-items: start;
     color: #b1b1b1;
-    margin-left: 12%;
-    gap: 42px;
+    margin-right: 16%;
 }
 
 .weather {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-smaller);
     font-family: var(--font-primary);
-    font-size: 26px;
-    margin-top: -25%;
 }
 
 #weather-city {
@@ -273,7 +263,7 @@ select {
 
 #weather-info {
     display: flex;
-    padding-left: 20px;
+    padding-left: 4px;
 }
 
 #weather-temp {
@@ -304,6 +294,22 @@ select {
     text-align: center;
     font-weight: lighter;
     color: #c9c9c9;
+    max-height: 350px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.ascii:hover {
+    cursor: pointer;
+}
+
+#ascii-description {
+    color: #555;
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 #ascii-placeholder-3 {
